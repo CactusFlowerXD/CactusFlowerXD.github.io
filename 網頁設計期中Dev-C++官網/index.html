@@ -13,7 +13,6 @@
         .logo:hover{
             color: aquamarine;
         }
-        <!--謝謝老師的下拉式選單-->
         #nav {
 	        float: left;
         }
@@ -58,12 +57,11 @@
 	    }
         .logo2{
             margin-top: 45px;
-            margin-left: 70px;
             border-radius: 5%;
         }
         .title{
             margin-top: 95px;
-            margin-left: 20px;
+            margin-left: 120px;
             width: 70%;
             color: #1a3959;
         }
@@ -97,6 +95,20 @@
             width: 180px;
             background: #f0a000;
         }
+        .a{
+            left: 0px;
+        }
+        .b{
+            left: 0px;
+        }
+        .c{
+            left: 0px;
+        }
+        .pics {
+            width: 320px;
+            height: 320px;
+            margin: 50px auto;
+        }
     </style>
 </head>
 <body style="margin: 0px;">
@@ -129,13 +141,16 @@
     </div>
 
     <div style="display: flex; margin-left: 15%;">
-        <img class="logo2" src="image/Logo-v2-square1.jpg" alt="" width="250">
+        <img class="logo2" src="image/Logo-v2-square1.jpg" alt="" width="200">
         <h1 class="title">適用於 Windows 的開源 C/C++ 整合式開發環境</h1>
     </div>
 
     <div style="display: flex; margin-left: 15%;">
         <div class="txt"><h2><a style="text-decoration: none;" href="index.html"><span style="color: rgb(59, 203, 155);">Dev-C++</span></a>是適用於 Windows 平台的全功能 C 和 C++ 整合開發環境 (IDE)。自1998 年第一個版本發布以來，數以百萬計的開發人員、學生和研究人員使用Dev-C++。它已出現在數十本C++ 和科學書籍中，並且仍然是全球大學和學校最喜愛的學習工具之一。</h2></div>
-        <img style="margin-top: 30px; margin-left: 20px;" src="image/dcpp5_scr-1.png" alt="" width="400">
+        <div class="pics">
+            <img style="margin-top: 30px; margin-left: 20px;" src="image/dcpp5_scr-1.png" alt="" width="400">
+            <img style="margin-top: 30px; margin-left: 20px;" src="image/content_Dev_C__官網.png" alt="" width="400">
+        </div>
     </div>
 
     <div style="border-top: solid 2px; margin: 50px 20px;"></div>
@@ -165,12 +180,12 @@
 
     <div style="border-top: solid 2px;margin: 20px 20px;"></div>
 
-    <div style="display: flex;margin-top: 10px;">
-        <img style="margin-left: 20%; margin-top: 25px;" src="image/bughlp.png" alt="" width="20" height="20">
+    <div class="a" style="display: flex;margin-top: 10px;">
+        <img style="margin-top: 25px;" src="image/bughlp.png" alt="" width="20" height="20">
         <h2 style="margin-left: 20px;">功能列表</h2>
     </div>
-    <div style="display: flex;">
-        <ul style="margin-left: 20%; margin-top: 10px;">
+    <div class="a" style="display: flex;">
+        <ul>
             <li>適用於 Windows 系統的極其輕量且可移植的 C/C++ IDE</li>
             <li>支援基於 GCC 的編譯器（Mingw、Cygwin...）</li>
             <li>快速建立 Windows GUI 和控制台應用程式、靜態庫和 DLL</li>
@@ -196,11 +211,11 @@
 
     <div style="border-top: solid 2px;margin: 20px 20px;"></div>
 
-    <div style="display: flex; margin-top: -10px;">
-        <img style="margin-left: 20%; margin-top: 25px;" src="image/opnproj.png" alt="" width="20" height="20">
+    <div class="b" style="display: flex; margin-top: -10px;">
+        <img style=" margin-top: 25px;" src="image/opnproj.png" alt="" width="20" height="20">
         <h2 style="margin-left: 20px;">Dev-C++ 原始碼</h2>
     </div>
-    <div style="margin-left: 20%;">
+    <div class="b">
         <p style="margin-top: -10px;">Dev-C++ 根據 GNU 通用公共授權版本 2 ( GPL v2 ) 授權。因此，其原始碼在相同條件下可用。</p>
         <p><span style="font-weight: bold;">Dev-C++ 5.0 (4.9.9.2) 原始碼 (1.6 MB)</span><br>
             需要 Delphi 6<br>
@@ -210,11 +225,11 @@
 
     <div style="border-top: solid 2px;margin: 20px 30px;"></div>
 
-    <div style="display: flex; margin-top: -10px;">
-        <img style="margin-left: 20%; margin-top: 25px;" src="image/resrc.png" alt="" width="20" height="20">
+    <div class="c" style="display: flex; margin-top: -10px;">
+        <img style="margin-top: 25px;" src="image/resrc.png" alt="" width="20" height="20">
         <h2 style="margin-left: 20px;">作者</h2>
     </div>
-    <div style="margin-left: 20%;">
+    <div class="c">
         <p style="margin-top: -10px;"><span style="font-weight: bold;">Colin Laplace</span>：專案創辦人兼首席開發人員</p>
         <p>主要貢獻者：<span style="font-weight: bold;">Mike Berg、Hongli Lai、Yiannis Mandravellos</span></p>
     </div>
@@ -222,8 +237,72 @@
     <div style="border-top: solid 2px;margin: 20px 30px;"></div>
 
     <div style="text-align: center; color: gray; margin-bottom: 50px;">版權所有 1998-2022 Colin Laplace（「Bloodshed Software」）</div>
-    <div style="text-align: center; color: gray;">期中作業：仿製Dev-C++中文官網</div>
+    <div style="text-align: center; color: gray;">期末作業：仿製Dev-C++中文官網(新增動畫)</div>
     <div style="text-align: center; color: gray; margin-bottom: 50px;">11360695 葉庭妤</div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="gsap-public/minified/gsap.min.js"></script>
+    <script src="gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="jquery.cycle.all.js"></script>
+    <script src="jquery.easing.min.js"></script>
+    <script>
+        gsap.set(".logo2", { x: 100 });
+        gsap.from(".logo2", {
+            duration: "2",
+            opacity: "0",
+            scale: "0.3",
+            ease: "back"
+        });
+    </script>
+     <script>
+        gsap.registerPlugin("ScrollTrigger");
+        gsap.to(".a",{
+            scrollTrigger:{
+               trigger:".a",
+               toggleActions:"restart pause reverse none",
+               markers:true,
+               start:"top 400px",
+               end:"bottom 15%",
+            },
+            x: "250",
+        }) 
+     </script>
+     <script>
+        gsap.registerPlugin("ScrollTrigger");
+        gsap.to(".b",{
+            scrollTrigger:{
+               trigger:".b",
+               //Actions: play,pause,resume,reverse,restart,reset,complete,none
+               toggleActions:"restart pause reverse none",
+               markers:true,
+               start:"top 400px",
+               end:"bottom 30%",
+            },
+            x: "450",
+        }) 
+     </script>
+     <script>
+        gsap.registerPlugin("ScrollTrigger");
+        gsap.to(".c",{
+            scrollTrigger:{
+               trigger:".c",
+               //Actions: play,pause,resume,reverse,restart,reset,complete,none
+               toggleActions:"restart pause reverse none",
+               markers:true,
+               start:"top 450px",
+               end:"bottom 55%",
+            },
+            x: "500",
+        }) 
+     </script>
+     <script>
+        $(function () {
+            $('.pics').cycle({
+                fx: 'shuffle',
+                easing: "easeOutBack",
+                delay: -10
+            });
+        });
+    </script>
 </body>
 </html>
