@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北排灣服飾特色</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'KTL', sans-serif;
+        }
+        .logo {
+            margin-top: 40px;
+        }
+        .img {
+            display: none;
+            width: 350px;
+            margin: 0 auto;
+        }
+        .txt {
+            display: none;
+            width: 140%;
+            font-size: 28px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .box {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .toggle-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div><img class="logo" src="img/title-1.png" alt="title" width="500"></div>
+
+    <div class="container">
+        <div class="box">
+            <h1>服裝配色</h1>
+            <img id="img1" class="img" src="img/cloth-N.jpg" alt="">
+            <div id="txt1" class="txt" style="margin-bottom: 20px;">衣服底色多為黑色，且衣服上的裝飾多以黃色為主</div>
+            <button class="toggle-btn" data-target="#img1, #txt1">- 說明 -</button>
+        </div>
+
+        <div class="box">
+            <h1>特色裝飾</h1>
+            <img id="img2" class="img" src="img/decoration-N.jpg" alt="">
+            <div id="txt2" class="txt" style="margin-bottom: 20px;">北排灣因為鄰近魯凱族，在服飾的表現上受到魯凱族的影響，會有百合花和蝴蝶紋，這是北排灣特有的元素。因此，雖然中排灣和北排灣的服飾很類似(都是珠繡為主)，但是可以靠這兩項元素來分辨其地區</div>
+            <button class="toggle-btn" data-target="#img2, #txt2">- 說明 -</button>
+        </div>
+
+        <div class="box">
+            <h1>珠繡縫製</h1>
+            <img id="img3" class="img" src="img/gb-N.jpg" alt="">
+            <div id="txt3" class="txt" style="margin-bottom: 20px;">珠繡是一種用珠子在衣服上繡圖案的縫製方法，使用珠繡的方式縫製衣服會使整體看起來較亮眼且立體</div>
+            <button class="toggle-btn" data-target="#img3, #txt3">- 說明 -</button>
+        </div>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").mouseleave(function(){
+                $(".img").slideUp();
+                $(".txt").slideUp();
+            });
+            $(".toggle-btn").click(function(){
+                var targets = $(this).data("target").split(", ");
+                $(targets[0]).slideToggle();
+                $(targets[1]).slideToggle();
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script>
+        var tl = gsap.timeline(); 
+        tl.from(".logo",{duration: 1, opacity: 0, scale: 0.3, ease: "back"});
+    </script>
+
+</body>
+</html>

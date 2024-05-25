@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中排灣服飾特色</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'KTL', sans-serif;
+        }
+        .logo {
+            margin-top: 40px;
+        }
+        .img {
+            display: none;
+            width: 350px;
+            margin: 0 auto;
+        }
+        .txt {
+            display: none;
+            width: 140%;
+            font-size: 28px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .box {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .toggle-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div><img class="logo" src="img/title-2.png" alt="title" width="500"></div>
+
+    <div class="container">
+        <div class="box">
+            <h1>服裝配色</h1>
+            <img id="img1" class="img" src="img/cloth-M.jpg" alt="">
+            <div id="txt1" class="txt" style="margin-bottom: 20px;">底色大多為黑色，會使用橘色、橘紅色的布料(非大紅色)</div>
+            <button class="toggle-btn" data-target="#img1, #txt1">- 說明 -</button>
+        </div>
+
+        <div class="box">
+            <h1>特色裝飾</h1>
+            <div id="txt2" class="txt" style="margin-bottom: 20px;">中排灣由於地理位置在北排、南排中間，會融合南北服裝的元素，呈現出北排和南排過度帶的特色，例如會使用橘色布料但又不像南排使用大紅色，以及和北排一樣使用珠繡縫製...等</div>
+            <button class="toggle-btn" data-target="#img2, #txt2">- 說明 -</button>
+        </div>
+        
+        <div class="box">
+            <h1>珠繡縫製</h1>
+            <img id="img3" class="img" src="img/gb-N.jpg" alt="">
+            <div id="txt3" class="txt" style="margin-bottom: 20px;">中排灣的縫製手法和北排灣類似，是以珠子在衣服上繡圖案的方式縫製</div>
+            <button class="toggle-btn" data-target="#img3, #txt3">- 說明 -</button>
+        </div>
+
+    </div>
+    
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").mouseleave(function(){
+                $(".img").slideUp();
+                $(".txt").slideUp();
+            });
+            $(".toggle-btn").click(function(){
+                var targets = $(this).data("target").split(", ");
+                $(targets[0]).slideToggle();
+                $(targets[1]).slideToggle();
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script>
+        var tl = gsap.timeline(); 
+        tl.from(".logo",{duration: 1, opacity: 0, scale: 0.3, ease: "back"});
+    </script>
+
+</body>
+</html>

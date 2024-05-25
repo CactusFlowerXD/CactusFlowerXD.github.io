@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南排灣服飾特色</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'KTL', sans-serif;
+        }
+        .logo {
+            margin-top: 40px;
+        }
+        .img {
+            display: none;
+            width: 350px;
+            margin: 0 auto;
+        }
+        .txt {
+            display: none;
+            width: 140%;
+            font-size: 28px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .box {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .toggle-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div><img class="logo" src="img/title-3.png" alt="title" width="500"></div>
+
+    <div class="container">
+        <div class="box">
+            <h1>服裝配色</h1>
+            <img id="img1" class="img" src="img/cloth-S.jpg" alt="">
+            <div id="txt1" class="txt" style="margin-bottom: 20px;">布料大多以大紅色、黑色為主。<br>大量使用紅色布料為南排灣的主要特色，其他地區的排灣族雖然也會有紅色布料，但不會像南排灣用的這麼大量</div>
+            <button class="toggle-btn" data-target="#img1, #txt1">- 說明 -</button>
+        </div>
+
+        <div class="box">
+            <h1>特色裝飾</h1>
+            <img id="img2" class="img" src="img/decoration-S.jpg" alt="">
+            <div id="txt2" class="txt" style="margin-bottom: 20px;">南排灣服飾的裝飾會有大量的人頭紋元素</div>
+            <button class="toggle-btn" data-target="#img2, #txt2">- 說明 -</button>
+        </div>
+
+        <div class="box">
+            <h1>貼布縫製</h1>
+            <img id="img3" class="img" src="img/gb-S.jpg" alt="">
+            <div id="txt3" class="txt" style="margin-bottom: 20px;">貼布繡是一種剪一塊布再放到衣服上縫製的做法，會有色塊的感覺<br>牡丹鄉地區的排灣族甚至會用繞繩的方式製作衣服</div>
+            <button class="toggle-btn" data-target="#img3, #txt3">- 說明 -</button>
+        </div>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").mouseleave(function(){
+                $(".img").slideUp();
+                $(".txt").slideUp();
+            });
+            $(".toggle-btn").click(function(){
+                var targets = $(this).data("target").split(", ");
+                $(targets[0]).slideToggle();
+                $(targets[1]).slideToggle();
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script>
+        var tl = gsap.timeline(); 
+        tl.from(".logo",{duration: 1, opacity: 0, scale: 0.3, ease: "back"});
+    </script>
+
+</body>
+</html>

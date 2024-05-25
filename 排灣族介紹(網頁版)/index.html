@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排灣族服飾介紹</title>
+    <style>
+        .logo_txt {
+            position: absolute;           
+            top: 50px;
+        }
+
+        .logo_txt1 {
+            left: 600px;
+        }
+
+        .logo_txt2 {
+            left: 850px;
+        }
+
+        .logo_txt3 {
+            left: 1100px;
+        }
+
+        .logo_txt4 {
+            left: 1350px;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <div style="margin-top: 40px; align-items: center;"><img class="logo" src="img/title.png" alt="" width="500"></div>
+    <div><img class="logo_txt logo_txt1" src="img/logo-1.png" alt="" width="200"></div>
+    <div><img class="logo_txt logo_txt2" src="img/logo-2.png" alt="" width="200"></div>
+    <div><img class="logo_txt logo_txt3" src="img/logo-3.png" alt="" width="200"></div>
+    <div><img class="logo_txt logo_txt4" src="img/logo-4.png" alt="" width="200"></div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+       var tl = gsap.timeline(); 
+       tl.from(".logo",{duration:"1", opacity:"0",scale:"0.3",ease:"back"});
+       //tl.to(".logo",{duration:"1", rotation:"360"});
+       tl.from(".logo_txt",{duration:"2", opacity:"0", y:"random(-200,200)",stagger:"0.5"}, "+=1"); 
+       tl.to(".logo_txt",{duration:"1", rotation:"360"}); 
+    </script>
+
+</body>
+</html>
